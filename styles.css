@@ -104,6 +104,7 @@ p{
     animation: changeText 9s infinite;
     font-size: 40px;
     font-weight: bold;
+    margin-left: 20px;
   }
   
   .carousel span:nth-child(1) {
@@ -160,14 +161,47 @@ p{
     background-color: #f59547;
   }
 
-
+  .h3{
+    margin: 0 auto;
+  }
+  .seccion1{
+    padding-bottom: 80px;
+  }
+  .tarjeta p{
+    color: black;
+  }
+  .tarjeta{
+    width: 250px;
+    height: 200px;
+    padding: 0 20px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+  }
+  .tarjeta img{
+    width: 60px;
+    margin: 0 auto;
+  }
+.cont-tarjetas{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
   .h3{
     margin-top: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0 auto;
     width: 150px;
     border: 2px solid black;
+    border-radius: 20px;
     margin-top: 20px;
+    text-align: center;
   }
   .h1-2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -178,13 +212,15 @@ p{
   .parrafo{
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    width: 500px;
     margin: 0 auto;
-    width: 650px;
-    margin-top: 30px;
   }
   footer{
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-color: black;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -193,28 +229,122 @@ p{
   .cont-footer{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-around;
+    
   }
   .cont-1{
-    width: 300px;
+    width: 400px;
     height: 30px;
     margin-right: 50px;
     margin-bottom: 90px;
     line-height: 1.5;
+    margin-top: 50px;
+    
+  }
+  .cont-1 p{
+    color: #94a3b8;
   }
   .cont-2{
     padding-right: 50px;
   }
   .cont-3{
     line-height: 1.5;
-
   }
-  .enlaces-rapidos{
+  .cont-2 h3{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  .cont-3 h3{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  .cont-2 p{
     line-height: 1.5;
+    color: #94a3b8;
+  } 
+  .cont-3 p{
+    line-height: 1.5;
+    color: #94a3b8;
   } 
   .linea-final p{
     margin-top: 40px;
     margin-right: 50px;
   }
+
+
+  .vision-mision{
+    background-image: url(images/fondo-patas.png);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+  .imagen-principal{
+    width: 100%;
+  }
+  .vision p{
+    color: black;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .vision h3{
+    margin-top: 10px;
+  }
+  .vision{
+    width: 400px;
+    height: 300px;
+    padding: 0 20px;
+    border: 2px solid rgb(248, 203, 119);
+    background-color: #fdf5d8;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .vision:hover{
+    box-shadow: 2px 2px 5px rgb(238, 141, 14);
+  }
+  .corazon{
+    width: 50px;
+    margin: 0 auto;
+  }
   
+  .mision p{
+    color: black;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .mision h3{
+    margin-top: 10px;
+  }
+  .lupa{
+    width: 50px;
+    margin: 0 auto;
+  }
+  .mision{
+    width: 400px;
+    height: 300px;
+    padding: 0 20px;
+    border: 2px solid rgb(248, 203, 119);
+    background-color: #fdf5d8;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .mision:hover{
+    box-shadow: 2px 2px 5px rgb(238, 141, 14);
+  }
