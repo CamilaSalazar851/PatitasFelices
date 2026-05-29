@@ -272,6 +272,95 @@ p{
     margin-right: 50px;
   }
 
+  .footer {
+  background-color: #1a1a1a;
+  padding: 32px 40px 20px 40px;
+  font-family: sans-serif;
+  height: 100px;
+}
+
+.footer-general {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+}
+
+.footer-nombre {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nombre {
+  font-size: 17px;
+  font-weight: 500;
+  color: #e8e8e8;
+}
+
+.eslogan {
+  font-size: 12px;
+  color: #777777;
+}
+
+.pie-correo {
+  font-size: 13px;
+  color: #999999;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.pie-correo:hover {
+  color: #e8e8e8;
+}
+.desarrollado-por{
+  font-size: 12px;
+  color: #999999;
+  padding-right: 70px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #333333;
+  margin: 0 0 16px 0;
+  width: 100%;
+}
+
+.copyrigh{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 16px;
+
+}
+
+
+.derechos {
+  font-size: 12px;
+  color: #555555;
+}
+
+.enlaces {
+  display: flex;
+  gap: 24px;
+  text-decoration: none;
+
+}
+
+.enlaces a {
+  font-size: 12px;
+  color: #555555;
+  text-decoration: none;
+  transition: color 0.2s;
+  padding-right: 70px;
+}
+
+.enlaces a:hover {
+  color: #aaaaaa;
+}
 
   .vision-mision{
     background-image: url(images/fondo-patas.png);
@@ -347,4 +436,10 @@ p{
   }
   .mision:hover{
     box-shadow: 2px 2px 5px rgb(238, 141, 14);
+  }
+
+
+  .titulo-carrusel{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
   }
