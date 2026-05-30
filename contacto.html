@@ -7,7 +7,6 @@
     <title>Contacto/title>
         <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <header class="header">
         <div class="titulo">
@@ -23,6 +22,80 @@
     </header>
     <div class="fondo-header"></div>
 
+    <section class="contact-section">
+  <div class="contact-info">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes dudas sobre un proceso de adopción? ¿Quieres realizar una donación en especie o convertirte en voluntario? Déjanos tu mensaje y te responderemos lo antes posible.</p>
+
+    <div class="dato">
+      <div class="dato-texto">
+        <span class="dato-label">LLÁMANOS</span>
+        <span class="dato-valor">+57 (300) 123-4567</span>
+      </div>
+    </div>
+
+    <div class="dato">
+      <div class="dato-texto">
+        <span class="dato-label">EMAIL</span>
+        <span class="dato-valor">hola@patitasfelices.org</span>
+      </div>
+    </div>
+
+    <div class="dato">
+      <div class="dato-texto">
+        <span class="dato-label">UBICACIÓN</span>
+        <span class="dato-valor">Calle de la Esperanza #123, Ciudad Animal</span>
+      </div>
+    </div>
+
+    <div class="redes">
+      <a class="red-link" href="#">f</a>
+      <a class="red-link" href="#">ig</a>
+      <a class="red-link" href="#">𝕏</a>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <div class="contact-form-card">
+      <div class="form-fila">
+        <div class="form-grupo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Tu nombre">
+        </div>
+        <div class="form-grupo">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" placeholder="Tus apellidos">
+        </div>
+      </div>
+      <div class="form-fila">
+        <div class="form-grupo">
+          <label for="ciudad">Ciudad</label>
+          <input type="text" id="ciudad" placeholder="Ej. Bogotá">
+        </div>
+        <div class="form-grupo">
+          <label for="correo">Correo</label>
+          <input type="email" id="correo" placeholder="ejemplo@correo.com">
+        </div>
+      </div>
+      <div class="form-grupo">
+        <label for="tipo">Tipo de consulta</label>
+        <select id="tipo">
+          <option value="" disabled selected></option>
+          <option>Adopción</option>
+          <option>Donación</option>
+          <option>Voluntariado</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="form-grupo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+      </div>
+      <button class="btn-enviar">Enviar Mensaje</button>
+      <p class="nota-campos">* Campos obligatorios para procesar tu solicitud</p>
+    </div>
+  </div>
+</section>
 
 
 
