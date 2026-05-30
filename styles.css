@@ -1,10 +1,9 @@
 *{
-   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-}
+
 header {
     background-color: rgb(255, 255, 255); 
     position: fixed;
@@ -448,17 +447,26 @@ hr {
   }
 
 .carrusel-rescates {
-    display: flex;
-    gap: 40px; 
-    overflow: hidden; 
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); 
+   grid-template-rows: auto auto;    
+   gap: 15px;                           
+   max-width: 1000px;                  
+   margin: 0 auto;  
+   margin-top: 50px;
+   margin-bottom: 50px;
 }
 .carrusel-rescates img {
     width: 300px; 
     height: 200px;
     margin-left: 100px;
-    margin-top: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .carrusel-rescates img:hover {
     transform: scale(1.1); 
