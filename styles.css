@@ -1,4 +1,6 @@
-
+/* ==========================================================================
+   1. RESET, VARIABLES & ESTILOS GENERALES
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,8 +9,116 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden; /* Evita desbordes horizontales en celulares */
 }
 
+p {
+    color: white;
+}
+
+/* ==========================================================================
+   2. ESTRUCTURAS DE TEXTO Y TÍTULOS (Unificados)
+   ========================================================================== */
+.h1-2, 
+.encabezado-adopta h2 {
+    text-align: center;
+    color: #ff7c11; /* Color naranja idéntico para destacar */
+    margin-top: 20px;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* Texto fluido según la pantalla */
+    font-weight: 700;
+}
+
+.titulo-conocenos, 
+.titulo-carrusel, 
+.titulo-adopta {
+    color: #fa7d17;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    margin: 30px auto 0 auto;
+    padding: 8px 0;
+}
+
+.titulo-carrusel {
+    font-size: 30px;
+}
+
+.titulo-conocenos {
+    margin-top: 30px;
+}
+
+.h3 {
+    margin: 20px auto;
+    width: 150px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.subtitulo-carrusel {
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 5%;
+}
+
+.parrafo, 
+.encabezado-adopta p {
+    color: #666666;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 0.95rem;
+}
+
+.parrafo {
+    color: black;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   3. COMPONENTES DE BOTONES (Unificados)
+   ========================================================================== */
+button, 
+.btn-perfil {
+    width: 100%;
+    max-width: 200px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: #f4a261;
+    color: white;
+    font-weight: 700;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    display: inline-block;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.btn-perfil {
+    max-width: 100%; /* El botón de la tarjeta ocupa el 100% de su contenedor */
+    margin: 0 !important; 
+}
+
+button:hover, 
+.btn-perfil:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+    transform: scale(0.95) !important;
+    background-color: #f59547 !important;
+}
+
+/* ==========================================================================
+   4. HEADER & NAVEGACIÓN
+   ========================================================================== */
 header {
     background-color: rgb(255, 255, 255); 
     position: fixed;
@@ -16,11 +126,12 @@ header {
     left: 0;
     width: 100%;
     height: 70px;
-    box-shadow: 0 2px 5px black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+    padding: 0 5%;
 }
 
 .fondo-header {
@@ -32,9 +143,7 @@ header {
 .titulo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding-left: 30px;
+    gap: 10px;
 }
 
 .logo {
@@ -43,24 +152,36 @@ header {
 }
 
 .navegador {
-    padding-right: 30px;
+    display: flex;
+    gap: 20px;
 }
 
 .navegador a {
     text-decoration: none;
     color: black;
-    margin-left: 40px;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
+.navegador a:hover {
+    color: #f4a261;
+}
+
+/* ==========================================================================
+   5. HERO / MAIN (Carrusel principal)
+   ========================================================================== */
 main {
     animation: carrusel 10s linear infinite alternate;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 900px;
+    min-height: 800px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 5%;
 }
 
 @keyframes carrusel {
@@ -72,35 +193,35 @@ main {
 .slogan {
     color: #F4A261;
     border: 3px solid rgb(255, 255, 255);
-    width: 570px;
+    width: 100%;
+    max-width: 570px;
     border-radius: 20px;
     background-color: aliceblue;
     margin-top: 30px;
-}
-
-p {
-    color: white;
+    padding: 15px;
 }
 
 .carousel {
     position: relative;
-    width: 600px;
-    height: 50px;
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
     overflow: hidden;
-    margin-top: 50px;
-    margin-left: 70px;
+    margin-top: 40px;
     border-radius: 10px;
     background-color: aliceblue;
+    display: flex;
+    align-items: center;
 }
   
 .carousel span {
     position: absolute;
-    width: 700px;
+    width: 100%;
     opacity: 0;
     animation: changeText 9s infinite;
-    font-size: 40px;
+    font-size: clamp(1.5rem, 4vw, 2.3rem);
     font-weight: bold;
-    margin-left: 20px;
+    padding-left: 20px;
 }
   
 .carousel span:nth-child(1) { animation-delay: 0s; }
@@ -115,187 +236,223 @@ p {
     100% { opacity: 0; }
 }
 
-button {
-    width: 200px;
-    font-size: 15px;
-    border-radius: 15px;
-    border: none;
-    background-color: #f4a261;
-    color: white;
-    font-weight: 700;
-    padding: 10px 20px;
-    margin-left: 70px;  
-    margin-top: 20px;
-}
-
-button:hover {
-    box-shadow: 5px 5px 10px black;
-    transform: scale(0.9);
-    background-color: #f59547;
-}
-
-.seccion1 {
-    padding-bottom: 80px;
-}
-
-.h3 {
-    margin: 20px auto 0 auto;
-    width: 150px;
-    border: 2px solid black;
-    border-radius: 20px;
-    text-align: center;
-}
-
-.h1-2 {
-    text-align: center;
-    color: #ff7c11;
-    margin-top: 20px;
-}
-
-.parrafo {
-    color: black;
-    background-color: #ffffff;
-    text-align: center;
-    padding: 40px 20px;
-    width: 500px;
+/* ==========================================================================
+   6. CONTENEDORES, GRIDS Y TARJETAS (Estructuras Flex y Grid)
+   ========================================================================== */
+.seccion1, 
+.seccion-adopta {
+    padding: 60px 5%;
+    max-width: 1200px;
     margin: 0 auto;
 }
-.cont-tarjetas {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    row-gap: 30px;
+
+/* Grids Dinámicos (Rescates y Adopciones) */
+.carrusel-rescates, 
+.grid-animales {
+    display: grid;
+    gap: 24px;
+    margin: 40px auto;
 }
 
-.tarjeta {
-    width: 250px;
-    height: 200px;
-    padding: 0 20px;
-    box-shadow: 2px 2px 5px black;
-    border-radius: 15px;
-    text-align: center;
+.carrusel-rescates {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1100px;
+}
+
+.grid-animales {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Flex Containers (Tarjetas informativas, Misión y Visión) */
+.cont-tarjetas, 
+.vision-mision {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 7px;
-}
-
-.tarjeta p {
-    color: black;
-}
-
-.tarjeta img {
-    width: 60px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .vision-mision {
     background-image: url(images/fondo-patas.png);
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    row-gap: 30px;
+    background-size: cover;
+    padding: 40px 5%;
 }
 
-.vision, .mision {
-    width: 400px;
-    height: 300px;
-    padding: 0 20px;
-    border: 2px solid rgb(248, 203, 119);
-    background-color: #fdf5d8;
+/* Estilos individuales de Tarjetas */
+.tarjeta, 
+.tarjetas-animales, 
+.vision, 
+.mision {
+    background: #ffffff;
     border-radius: 15px;
-    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta {
+    width: 100%;
+    max-width: 280px;
+    min-height: 220px;
+    padding: 25px 20px;
     justify-content: center;
-    gap: 7px;
-    margin: 30px 0;
-    font-size: 20px;
+    align-items: center;
+    gap: 10px;
 }
 
-.vision:hover, .mision:hover {
-    box-shadow: 2px 2px 5px rgb(238, 141, 14);
+.tarjetas-animales {
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
 }
 
-.vision p, .mision p {
+.vision, 
+.mision {
+    width: 100%;
+    max-width: 450px;
+    min-height: 300px;
+    padding: 30px 20px;
+    border: 2px solid rgb(248, 203, 119);
+    background-color: #fdf5d8;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Hovers de tarjetas */
+.tarjetas-animales:hover, 
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+.vision:hover, 
+.mision:hover {
+    box-shadow: 0 4px 15px rgb(238, 141, 14);
+}
+
+/* Elementos internos de las tarjetas */
+.tarjeta p, 
+.vision p, 
+.mision p {
     color: black;
-    width: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+.vision p, 
+.mision p {
+    max-width: 350px;
     margin: 10px auto 0 auto;
 }
 
-.vision h3, .mision h3 {
-    margin-top: 10px;
-}
-
-.corazon, .lupa {
-    width: 50px;
-    margin: 0 auto;
-}
-
-.titulo-conocenos, .titulo-carrusel {
-    color: #fa7d17;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 20px;
-    width: 450px;
-    margin: 0 auto;
-}
-
-.titulo-carrusel {
-    font-size: 30px;
-    margin-top: 30px;
-}
-
-.titulo-conocenos, .carrusel2 {
-    margin-top: 30px;
-}
-
-.subtitulo-carrusel {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.carrusel-rescates {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: auto auto;    
-    gap: 15px;                          
-    max-width: 1000px;                  
-    margin: 50px auto;  
-}
+.tarjeta img { width: 60px; height: auto; }
+.corazon, .lupa { width: 50px; height: auto; }
 
 .carrusel-rescates img {
-    width: 300px; 
-    height: 200px;
+    width: 100%; 
+    height: 220px;
     object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease-in-out;
-    margin: 0;
-    padding: 0;
 }
 
 .carrusel-rescates img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.04); 
     cursor: pointer;
 }
 
+/* Detalles de Tarjetas de Animales */
+.imagen-contenedor {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    background-color: #f7f7f7;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge-estado {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #666666;
+    z-index: 10;
+}
+
+.badge-estado.adoptado {
+    background: rgba(230, 245, 240, 0.9);
+    color: #2d6a4f;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.encabezado-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.encabezado-tarjeta h3 {
+    font-size: 1.25rem;
+    color: #111111;
+    font-weight: 700;
+}
+
+.badge-tamano {
+    font-size: 0.65rem;
+    background-color: #f0f0f0;
+    color: #777777;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.contenido-tarjeta .raza { color: #777777; font-size: 0.85rem; }
+.contenido-tarjeta .edad { color: #222222; font-size: 0.85rem; font-weight: 600; }
+
+.contenido-tarjeta a {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    margin-top: 12px;
+}
+
+/* ==========================================================================
+   7. SECCIÓN CONTACTO
+   ========================================================================== */
 .seccion-contacto {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;
-    padding: 80px 10%;
+    gap: 40px;
+    padding: 60px 5%;
     background: #fdfbf7;
     flex-wrap: wrap;
 }
 
 .informacion-contacto {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .informacion-contacto h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     margin-bottom: 20px;
     color: #2f4f4f;
 }
@@ -355,23 +512,21 @@ button:hover {
 
 .formulario-contacto {
     flex: 1;
-    min-width: 350px;
+    min-width: 280px;
 }
 
 .tarjeta-formulario {
     background: white;
-    padding: 35px;
+    padding: 30px 20px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,.08);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
 }
 
 .fila-formulario {
     display: flex;
     gap: 20px;
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 .grupo-formulario {
@@ -396,6 +551,7 @@ button:hover {
     font-size: .95rem;
     outline: none;
     transition: .3s;
+    width: 100%;
 }
 
 .grupo-formulario input:focus,
@@ -410,7 +566,7 @@ button:hover {
 }
 
 .boton-enviar {
-    width: auto;
+    width: 100%;
     padding: 15px;
     border: none;
     border-radius: 10px;
@@ -433,11 +589,14 @@ button:hover {
     text-align: center;
 }
 
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
 .footer {
     background-color: #1a1a1a;
-    padding: 32px 40px 20px 40px;
+    padding: 40px 5% 20px 5%;
     font-family: sans-serif;
-    height: 150px;
+    height: auto;
 }
 
 .footer-general {
@@ -445,7 +604,7 @@ button:hover {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
     padding-bottom: 20px;
 }
 
@@ -459,11 +618,6 @@ button:hover {
     font-size: 17px;
     font-weight: 500;
     color: #e8e8e8;
-}
-
-.eslogan {
-    font-size: 12px;
-    color: #777777;
 }
 
 .pie-correo {
@@ -480,7 +634,6 @@ button:hover {
 .desarrollado-por {
     font-size: 12px;
     color: #999999;
-    padding-right: 70px;
 }
 
 hr {
@@ -495,7 +648,7 @@ hr {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 15px;
     padding-bottom: 16px;
 }
 
@@ -507,7 +660,6 @@ hr {
 .enlaces {
     display: flex;
     gap: 24px;
-    text-decoration: none;
 }
 
 .enlaces a {
@@ -515,17 +667,36 @@ hr {
     color: #555555;
     text-decoration: none;
     transition: color 0.2s;
-    padding-right: 70px;
 }
 
 .enlaces a:hover {
     color: #aaaaaa;
 }
 
+/* ==========================================================================
+   9. MEDIA QUERIES (Puntos de quiebre para Responsive)
+   ========================================================================== */
 @media (max-width: 768px) {
-    .seccion-contacto {
-        padding: 60px 5%;
-        gap: 40px;
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+        position: relative;
+    }
+
+    .fondo-header {
+        display: none;
+    }
+
+    main {
+        align-items: center;
+        text-align: center;
+        min-height: 600px;
+    }
+
+    .carousel span {
+        padding-left: 0;
     }
 
     .fila-formulario {
@@ -533,7 +704,16 @@ hr {
         gap: 0;
     }
 
-    .informacion-contacto h2 {
-        font-size: 2rem;
+    .footer-general, .copyrigh {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navegador {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 }
