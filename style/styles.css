@@ -24,14 +24,15 @@ p {
 
 .titulo-conocenos, 
 .titulo-carrusel, 
-.titulo-adopta {
+.titulo-adopta,
+.h3-metrica {
     color: #fa7d17;
     text-align: center;
     border: 2px solid black;
     border-radius: 20px;
     width: 90%;
     max-width: 450px;
-    margin: 30px auto 0 auto;
+    margin: 0px auto 0 auto;
     padding: 8px 0;
 }
 
@@ -818,4 +819,143 @@ hr {
         justify-content: center;
         gap: 12px;
     }
+}
+
+
+
+.introduccion{
+    text-align: center;
+    background-color: rgb(250, 236, 223) ;
+}
+.introduccion p{
+    text-align: center;
+    color: #000000;
+}
+.introduccion h1{
+    margin-top: 30px;
+}
+.introduccion p{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 650px;
+}
+.h3-metrica{
+    background-color: white;
+}
+.cont-datos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    background-color: rgb(250, 236, 223) ;;
+}
+.tjt{
+    margin-top: 30px;
+    border: 2px solid black;
+    box-shadow: 0.3px 4px 5px orangered;
+    border-radius: 20px;
+    text-align: center;
+    height: 120px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+}
+
+.tjt .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 25px
+}
+
+.tjt p {
+    color: #000000;
+    margin: 10px 0px;
+}
+
+.tjt img{
+    width: 50px;
+    height: 50px;
+}
+.tjt .card-header .imagen{
+    background-color: rgb(255, 189, 163);
+    border-radius: 15px;
+}
+
+
+
+.tjt:hover{
+    transform: scale(1.04); 
+    cursor: pointer;
+}
+.icon-promedio{
+    width: 30px;
+    height: 30px;
+}
+.barra{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(250, 125, 79) 0% 90%, white 90% 100%);
+}
+.barra2{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(250, 125, 79) 0% 70%, white 70% 100%);
+}
+.barra3{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(250, 125, 79) 0% 60%, white 60% 100%);
+}
+.barra4{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    background: linear-gradient(to right, rgb(250, 125, 79) 0% 90%, white 90% 100%);
+}
+.estaditicas{
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    background-color: white;
+    padding-bottom: 30px;
+    
+}
+.tarjeta-promedio{
+    align-self: flex-start;
+    margin-left: 47px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.impacto{
+    background-color: rgb(250, 236, 223);
+}
+.parrafo-grafico{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.parrafo-grafico p{
+    color: black;
+    width: 70%;
 }
